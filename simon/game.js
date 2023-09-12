@@ -9,9 +9,9 @@ function playSound(name) {
 }
 
 function animatePress(currentColor) {
-    $(`#${currentColor}`).addClass("pressed")
+    $(`#${currentColor}`).addClass("pressed");
     setTimeout(function () {
-        $(`#${currentColor}`).removeClass("pressed")
+        $(`#${currentColor}`).removeClass("pressed");
     }, 100);
 }
 
@@ -42,16 +42,15 @@ function checkAnswer(currentLevel) {
                 nextSequence();
             }, 1000);
         }
-    }
-    else {
+    } else {
         playSound("wrong");
-        
-        $("body").addClass("game-over")
+
+        $("body").addClass("game-over");
         setTimeout(function () {
-            $("body").removeClass("game-over")
+            $("body").removeClass("game-over");
         }, 200);
 
-        $("h1").text("Game Over, Press Any Key to Restart")
+        $("h1").text("Game Over, Press Any Key to Restart");
         startOver();
     }
 }
