@@ -1,0 +1,13 @@
+version: "3"
+services:
+    node:
+        container_name: symonds
+        hostname: symonds
+        image: node:latest
+        restart: unless-stopped
+        ports:
+            - "8084:8084"
+        volumes:
+            - ./:/home/node/app
+        working_dir: /home/node/app
+        command: "npm start"
