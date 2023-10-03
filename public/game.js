@@ -48,9 +48,7 @@ function playSound(name) {
 
 function animatePress(currentColor) {
     $(`#${currentColor}`).addClass("pressed");
-    setTimeout(function () {
-        $(`#${currentColor}`).removeClass("pressed");
-    }, 100);
+    setTimeout($(`#${currentColor}`).removeClass("pressed"), 100);
 }
 
 function startOver() {
@@ -75,7 +73,7 @@ function nextSequence() {
 function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] == userClickedPattern[currentLevel]) {
         if (gamePattern.length == userClickedPattern.length) {
-            setTimeout(function () {
+            setTimeout(() => {
                 userClickedPattern = [];
                 nextSequence();
             }, 1000);
@@ -93,7 +91,7 @@ function checkAnswer(currentLevel) {
     }
 }
 
-$(document).keydown(function () {
+$(document).keydown(() => {
     if (!gameStarted) {
         gameStarted = true;
         $("h1").text(`Level ${level}`);
