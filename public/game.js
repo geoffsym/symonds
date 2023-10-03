@@ -1,3 +1,4 @@
+const context = new AudioContext();
 const buttonColors = ["green", "red", "yellow", "blue"];
 let gamePattern = [];
 let userClickedPattern = [];
@@ -5,41 +6,37 @@ let gameStarted = false;
 let level = 0;
 
 function playSound(name) {
-    console.log(name);
-
-    const context = new AudioContext();
     const osc = context.createOscillator();
     const g = context.createGain();
-    osc.type = "triangle";
     osc.connect(g);
     g.connect(context.destination);
+    g.gain.value = 0.75;
 
     switch (name) {
         case buttonColors[0]:
+            osc.type = "triangle";
             osc.frequency.value = 293.66;
             break;
 
         case buttonColors[1]:
+            osc.type = "triangle";
             osc.frequency.value = 392.0;
             break;
 
         case buttonColors[2]:
+            osc.type = "triangle";
             osc.frequency.value = 493.88;
             break;
 
         case buttonColors[3]:
+            osc.type = "triangle";
             osc.frequency.value = 587.33;
             break;
 
         default:
             osc.type = "sawtooth";
             osc.frequency.value = 138.59;
-            osc.start();
-            g.gain.exponentialRampToValueAtTime(
-                0.00001,
-                context.currentTime + 0.5
-            );
-            return;
+            break;
     }
 
     osc.start();
@@ -88,14 +85,14 @@ function checkAnswer(currentLevel) {
         $("body").addClass("game-over");
         setTimeout(function () {
             $("body").removeClass("game-over");
-        }, 500);
+        }, 250);
 
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over... Restart?");
         startOver();
     }
 }
 
-$(document).keydown(function () {
+$("#level-title").click(function () {
     if (!gameStarted) {
         gameStarted = true;
         $("h1").text(`Level ${level}`);
