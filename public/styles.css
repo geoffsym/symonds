@@ -1,12 +1,12 @@
 body {
-    text-align: center;
     background-color: #011f3f;
+    text-align: center;
 }
 
 #level-title {
-    font-family: "Press Start 2P", cursive;
-    font-size: 3rem;
     margin: 5%;
+    font-size: 3rem;
+    font-family: "Press Start 2P", cursive;
     color: #fef2bf;
 }
 
@@ -19,15 +19,15 @@ body {
 }
 
 .btn {
-    height: 200px;
     width: 200px;
+    height: 200px;
     border: 10px solid black;
     border-radius: 20%;
 }
 
 .game-over {
-    background-color: red;
     opacity: 0.8;
+    background-color: red;
 }
 
 .red {
