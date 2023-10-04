@@ -59,7 +59,7 @@ function startOver() {
 
 function nextSequence() {
     level++;
-    $("h1").text(`Level ${level}`);
+    $("h1").text(`\nLevel ${level}`);
 
     const randomNumber = Math.floor(Math.random() * 4);
     const randomChosenColor = buttonColors[randomNumber];
@@ -89,7 +89,7 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 250);
 
-        $("h1").text("Game Over...\nRestart?");
+        $("h1").text("Game Over\nRestart?");
         startOver();
     }
 }
@@ -97,7 +97,6 @@ function checkAnswer(currentLevel) {
 $("#level-title").click(function () {
     if (!gameStarted) {
         gameStarted = true;
-        $("h1").text(`Level ${level}\n`);
         nextSequence();
     }
 });
