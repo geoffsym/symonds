@@ -105,8 +105,6 @@ $(".btn").click(function () {
     const userChosenColor = this.id;
     animatePress(userChosenColor);
     playSound(userChosenColor);
-    if (gameStarted) {
-        userClickedPattern.push(userChosenColor);
-        checkAnswer(userClickedPattern.length - 1);
-    }
+    userClickedPattern.push(userChosenColor);
+    checkAnswer(userClickedPattern.length - 1);
 });
