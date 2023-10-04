@@ -14,22 +14,22 @@ function playSound(name) {
 
     switch (name) {
         case buttonColors[0]:
-            osc.type = "triangle";
+            osc.type = "square";
             osc.frequency.value = 293.66;
             break;
 
         case buttonColors[1]:
-            osc.type = "triangle";
+            osc.type = "square";
             osc.frequency.value = 392.0;
             break;
 
         case buttonColors[2]:
-            osc.type = "triangle";
+            osc.type = "square";
             osc.frequency.value = 493.88;
             break;
 
         case buttonColors[3]:
-            osc.type = "triangle";
+            osc.type = "square";
             osc.frequency.value = 587.33;
             break;
 
