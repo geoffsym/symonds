@@ -10,7 +10,7 @@ function playSound(name) {
     const g = context.createGain();
     osc.connect(g);
     g.connect(context.destination);
-    g.gain.value = 0.75;
+    g.gain.value = 0.5;
 
     switch (name) {
         case buttonColors[0]:
