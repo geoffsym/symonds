@@ -73,8 +73,10 @@ function checkAnswer(currentLevel) {
     if (gamePattern[currentLevel] == userClickedPattern[currentLevel]) {
         if (gamePattern.length == userClickedPattern.length) {
             setTimeout(function () {
-                userClickedPattern = [];
-                nextSequence();
+                if (gameStarted) {
+                    userClickedPattern = [];
+                    nextSequence();
+                }
             }, 1000);
         }
     } else {
@@ -87,7 +89,7 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 250);
 
-        $("h1").text("Game Over... Restart?");
+        $("h1").text("Game Over...\nRestart?");
         startOver();
     }
 }
@@ -95,7 +97,7 @@ function checkAnswer(currentLevel) {
 $("#level-title").click(function () {
     if (!gameStarted) {
         gameStarted = true;
-        $("h1").text(`Level ${level}`);
+        $("h1").text(`Level ${level}\n`);
         nextSequence();
     }
 });

@@ -9,13 +9,22 @@ body {
 }
 
 #level-title {
-    margin: 5%;
+    width: max-content;
+    margin-top: 3rem;
     font-size: 3rem;
     font-family: "Press Start 2P", cursive;
     color: #fef2bf;
+    white-space: pre-line;
 }
 
-.container {
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-grid {
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr 1fr;
