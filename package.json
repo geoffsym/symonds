@@ -1,22 +1,22 @@
 {
-    "name": "symonds",
-    "version": "1.0.0",
-    "description": "Definitely not that other game with a rhyming name!",
-    "main": "index.js",
-    "type": "module",
-    "scripts": {
-        "start": "npm install && node index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/geoffsym/symonds.git"
-    },
-    "author": "Geoff Symonds",
-    "bugs": {
-        "url": "https://github.com/geoffsym/symonds/issues"
-    },
-    "homepage": "https://github.com/geoffsym/symonds#readme",
-    "dependencies": {
-        "express": "^4.18.2"
-    }
+  "name": "symonds",
+  "version": "1.0.0",
+  "description": "Definitely not that other game with a rhyming name!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm install && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffsym/symonds.git"
+  },
+  "author": "Geoff Symonds",
+  "bugs": {
+    "url": "https://github.com/geoffsym/symonds/issues"
+  },
+  "homepage": "https://github.com/geoffsym/symonds#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

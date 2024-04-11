@@ -1,12 +1,12 @@
 services:
-    node:
-        container_name: symonds
-        hostname: symonds
-        image: node:latest
-        restart: unless-stopped
-        ports:
-            - "8084:3000"
-        volumes:
-            - ./:/home/node/app
-        working_dir: /home/node/app
-        command: "npm run start"
+  node:
+    container_name: symonds
+    hostname: symonds
+    image: node:latest
+    restart: unless-stopped
+    ports:
+      - "8084:3000"
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
+    command: "npm run start"
